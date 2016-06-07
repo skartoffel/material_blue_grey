@@ -218,16 +218,24 @@ select {
     color: #222;
 }
 
-#content table {
+#content table, #overDiv + table, #overDiv + table table {
+    border: 0;
     background: #ECEFF1;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-#content table tr:not(:last-child) {
+#content table tr:not(:last-child), 
+#overDiv + table tr:not(:last-child),
+#overDiv + table table tr:not(:last-child) {
     border-bottom: 1px solid #d4d7d8;
 }
 
-#content td, #content th {
+#content td, 
+#content th, 
+#overDiv + table td, 
+#overDiv + table th,
+#overDiv + table table td, 
+#overDiv + table table th {
     background: #ECEFF1;
     border: 0;
     color: #222;
@@ -273,7 +281,7 @@ select {
     content: "change name";
 }
 
-#content img[src*="img/r"] {
+#content th > img[src*="img/r"] {
     background-size: 16px;
     box-sizing: border-box;
     height: 16px;
@@ -321,6 +329,11 @@ select {
     background-image: url(img/r9.png);
 }
 
+/*** COMBAT REPORT ***/
+#overDiv + table {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 /*** RESOURCES ***/
 #ressourcen { margin-top: 0.5em; }
 #ressourcen font[color="#FFFFFF"] { color: #ECEFF1; }
@@ -328,8 +341,11 @@ select {
 /*** COLORS ***/
 font[color="yellow"] { color: orange; }
 font[color="#ff0000"], font[color="FF0000"] { color: #e00; }
-font[color="#00ff00"], font[color="00FF00"], .noob { color: #0c0; }
+font[color="#00ff00"], font[color="00FF00"], font[color="lime"], .noob { color: #0c0; }
 .vacation { color: #6cf; }
+.flight.ownattack { color: #0c0; }
+.return.ownattack { color: #0a0; }
+
 
 
 /**********************************************************************

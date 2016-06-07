@@ -1,0 +1,385 @@
+/**********************************************************************
+ *
+ * Skin for OGame v0.77 (retro)
+ *
+ * Name: Material Design
+ * Colors: blue / gray
+ *
+ * CSS (c) 2016 by Suesskartoffel
+ * Icons (c) by icons8.com
+ *
+ *********************************************************************/
+ 
+ 
+/**********************************************************************
+ * CSS Fixes (c) by Daniel Rudolf
+ *********************************************************************/
+body #header_top { /* msr */
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    padding-left: 190px;
+}
+
+#header_top > center > * { margin: 0 auto; }
+#header_top > center > table {
+    width: 60%;
+    max-width: 700px;
+}
+#header_top > center > table td { width: auto !important; }
+#header_top > center > table table { width: 100% !important; }
+#header_top > center > table > tbody > tr > td:first-child { width: 25% !important; }
+#header_top > center > table > tbody > tr > td:last-child { width: 75% !important; }
+#header_top > center > table #resources td { width: 25% !important; }
+
+#header_top + #leftmenu + #content { padding-top: 75px; }
+#leftmenu + #content { padding-left: 200px; }
+
+#content > center > br,
+#content > center > center > br {
+    display: none;
+}
+#content > center > *:not(br),
+#content > center > center > *:not(br) {
+    margin-top: 20px !important;
+}
+
+#galaxy_form #t1 table td.l { vertical-align: middle; }
+ 
+/**********************************************************************
+ *********************************************************************/
+             
+html {
+    font-size: 80%;
+}
+
+body {
+    background: #fff;
+    margin: 0;
+    overflow: initial !important;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+img {
+    display: none;
+}
+
+textarea, input {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #222 !important;
+}
+
+input[type="submit"], input[type="reset"], input[type="button"] {
+    background-color: #CFD8DC;
+    border: 0;
+    border-radius: 2px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin: 5px;
+    padding: 5px 20px;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover {
+    background-color: #607D8B;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    color: #fff !important;
+}
+
+input[type="checkbox"] + input[value="REPORT MESSAGE"] {
+    padding: 0;
+    margin: 0;
+    border: 0 none;
+    box-shadow: initial;
+    background: transparent;
+    color: #777 !important;
+    font-weight: bold;
+}
+input[type="checkbox"]:hover + input[value="REPORT MESSAGE"],
+input[type="checkbox"] + input[value="REPORT MESSAGE"]:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+select {
+    background-color: #fff;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 1px 0 rgba(0,0,0,0.2);
+    color: #222;
+}
+
+/*** TOOLTIPS ***/
+#overDiv {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#overDiv td {
+    background-color: #263238;
+    border: 0; 
+}
+
+#overDiv th {
+    background-color: #263238;
+    border: 0; 
+}
+
+#overDiv table table table table {
+    width: 100%;
+}
+
+#overDiv table table table table tr {
+    border-top: 1px solid #36474f;
+}
+
+/*** HEADER ***/
+#header_top {
+    background: #263238;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-sizing: border-box;
+    height: 75px;
+    padding-top: 10px;
+}
+
+/*** MENU ***/
+#menu {
+    background: #607D8B;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    color: black;
+    height: 100%;
+    overflow: auto;
+    padding: 0;
+}
+
+#menu > table {
+    width: 100%;
+}
+
+#menu > p {
+    display: none;
+}
+
+#menu td {
+    background: transparent;
+    padding: 0;
+}
+
+#menu a {
+    color: #eee;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+#menu a:hover {
+    background: #78909C;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-decoration: none;
+
+}
+
+#menu > table { margin: 10px 0; }
+
+#menu > table tr:first-child,
+#menu > table tr:last-child {
+    display: none;
+}
+
+#menu > table div font { display: block; }
+#menu > table div font a {
+    display: block;
+    padding: 5px 10px;
+}
+
+#menu > table tr:nth-child(12) div,
+#menu > table tr:nth-child(16) div,
+#menu > table tr:nth-last-child(3) div {
+    margin-top: 1.5em;
+}
+
+/*** CONTENT ***/
+#content {
+    box-sizing: border-box;
+    position: initial;
+    top: initial !important;
+    left: initial;
+    display: block;
+    width: 100%;
+    height: initial !important;
+    overflow: initial;
+    padding: 0 10px 20px 10px;
+}
+#header_top + #leftmenu + #content { padding-top: 75px; }
+#leftmenu + #content { padding-left: 200px; }
+
+#content center {
+    color: #222;
+}
+
+#content table {
+    background: #ECEFF1;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#content table tr:not(:last-child) {
+    border-bottom: 1px solid #d4d7d8;
+}
+
+#content td, #content th {
+    background: #ECEFF1;
+    border: 0;
+    color: #222;
+    padding: 10px;
+}
+
+#content div.z {
+    color: #222;
+}
+
+#content a {
+    color: #777;
+}
+
+#content > center > img {
+    background: #ECEFF1;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    margin-bottom: 20px;
+    padding: 9px;
+}
+
+#content > center > a {
+    display: block;
+}
+
+#content img[src^="pic.php?url="], 
+#content img[src*="img/"], 
+#content img[src*="/pic/"],
+#content img[src*="debris.jpg"],
+#content a[onmouseover] > img[src*="s_mond.jpg"] {
+    display: initial;
+}
+
+#content img[src*="appwiz.gif"] {
+    display: none;
+}
+
+#content a[href$="&a=9"]::after {
+    content: "change tag |";
+}
+
+#content a[href$="&a=10"]::after {
+    content: "change name";
+}
+
+#content img[src*="img/r"] {
+    background-size: 16px;
+    box-sizing: border-box;
+    height: 16px;
+    width: 16px;
+    padding-left: 16px;
+}
+
+#content img[src*=".gif"] {
+    width: 14px;
+}
+
+#content img[src*="img/r1"] {
+    background-image: url(img/r1.png);
+}
+
+#content img[src*="img/r2"] {
+    background-image: url(img/r2.png);
+}
+
+#content img[src*="img/r3"] {
+    background-image: url(img/r3.png);
+}
+
+#content img[src*="img/r4"] {
+    background-image: url(img/r4.png);
+}
+
+#content img[src*="img/r5"] {
+    background-image: url(img/r5.png);
+}
+
+#content img[src*="img/r6"] {
+    background-image: url(img/r6.png);
+}
+
+#content img[src*="img/r7"] {
+    background-image: url(img/r7.png);
+}
+
+#content img[src*="img/r8"] {
+    background-image: url(img/r8.png);
+}
+
+#content img[src*="img/r9"] {
+    background-image: url(img/r9.png);
+}
+
+/*** RESOURCES ***/
+#ressourcen { margin-top: 0.5em; }
+#ressourcen font[color="#FFFFFF"] { color: #ECEFF1; }
+
+/*** COLORS ***/
+font[color="yellow"] { color: orange; }
+font[color="#ff0000"], font[color="FF0000"] { color: #e00; }
+font[color="#00ff00"], font[color="00FF00"], .noob { color: #0c0; }
+.vacation { color: #6cf; }
+
+
+/**********************************************************************
+ * Responsiveness (c) by Daniel Rudolf
+ *********************************************************************/
+@media (max-device-width: 767px) {
+    body #header_top { /* msr */
+        position: initial;
+        padding-left: 0;
+    }
+    #header_top + #leftmenu + #content { padding-top: 0; }
+    #leftmenu + #content { padding-left: 0; }
+
+    #leftmenu #menu { /* msr */
+        position: initial;
+        width: 100%;
+        height: auto;
+        overflow: auto;
+    }
+
+    #menu { padding: 10px 0 !important; }
+    #menu table { margin: 0; }
+
+    #menu table,
+    #menu table tbody,
+    #menu table tbody tr,
+    #menu table tbody tr td {
+        display: block;
+    }
+    #menu table tr {
+        float: left;
+        width: 50%;
+    }
+    #menu > table tr:nth-child(12),
+    #menu > table tr:nth-child(16),
+    #menu > table tr:nth-last-child(3) {
+        clear: left;
+    }
+    #menu > table tr:nth-child(13) div,
+    #menu > table tr:nth-child(17) div,
+    #menu > table tr:nth-last-child(2) div {
+        margin-top: 1.5em;
+    }
+    #menu table a {
+        font-size: 14px;
+        padding: 10px !important;
+    }
+}
+
+@media (max-device-width: 991px) {
+    #header_top > center { padding: 0 20px; }
+    #header_top > center > table { width: 100%; }
+}

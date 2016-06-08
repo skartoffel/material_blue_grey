@@ -332,12 +332,15 @@ font[color="#00ff00"], font[color="00FF00"], font[color="lime"], .noob { color: 
 
 /*** RESPONSIVENESS ***/
 @media (max-device-width: 767px) {
-    #header_top { position: initial; }
+    #header_top {
+        position: initial;
+        padding-left: 20px;
+    }
     #header_top + #leftmenu + #content { padding-top: 0; }
     #leftmenu + #content { padding-left: 0; }
 
     #menu {
-        position: initial;
+        position: initial !important;
         width: 100%;
         height: auto;
         overflow: auto;

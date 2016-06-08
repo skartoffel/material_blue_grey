@@ -6,49 +6,9 @@
  * Colors: blue / gray
  *
  * CSS (c) 2016 by Suesskartoffel
+ *                 Daniel Rudolf
  * Icons (c) by icons8.com
  *
- *********************************************************************/
- 
- 
-/**********************************************************************
- * CSS Fixes (c) by Daniel Rudolf
- *********************************************************************/
-body #header_top { /* msr */
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
-    padding-left: 190px;
-}
-
-#header_top > center > * { margin: 0 auto; }
-#header_top > center > table {
-    width: 60%;
-    max-width: 700px;
-}
-#header_top > center > table td { width: auto !important; }
-#header_top > center > table table { width: 100% !important; }
-#header_top > center > table > tbody > tr > td:first-child { width: 25% !important; }
-#header_top > center > table > tbody > tr > td:last-child { width: 75% !important; }
-#header_top > center > table #resources td { width: 25% !important; }
-
-#header_top + #leftmenu + #content { padding-top: 75px; }
-#leftmenu + #content { padding-left: 200px; }
-
-#content > center > br,
-#content > center > center > br {
-    display: none;
-}
-#content > center > *:not(br),
-#content > center > center > *:not(br) {
-    margin-top: 20px !important;
-}
-
-#galaxy_form #t1 table td.l { vertical-align: middle; }
- 
-/**********************************************************************
  *********************************************************************/
              
 html {
@@ -137,12 +97,28 @@ select {
 
 /*** HEADER ***/
 #header_top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 75px;
+    padding: 10px 20px 0 210px;
     background: #263238;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    box-sizing: border-box;
-    height: 75px;
-    padding-top: 10px;
 }
+
+#header_top > center > table {
+    width: 60%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+#header_top > center > table td { width: auto !important; }
+#header_top > center > table table { width: 100% !important; }
+#header_top > center > table > tbody > tr > td:nth-child(1) { width: 25% !important; }
+#header_top > center > table > tbody > tr > td:nth-child(2) { width: 75% !important; }
+#header_top > center > table table#resources td { width: 25% !important; }
 
 /*** MENU ***/
 #menu {
@@ -177,7 +153,6 @@ select {
     background: #78909C;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     text-decoration: none;
-
 }
 
 #menu > table { margin: 10px 0; }
@@ -216,6 +191,15 @@ select {
 
 #content center {
     color: #222;
+}
+
+#content > center > br,
+#content > center > center > br {
+    display: none;
+}
+#content > center > *:not(br),
+#content > center > center > *:not(br) {
+    margin-top: 20px !important;
 }
 
 #content table, #overDiv + table, #overDiv + table table {
@@ -329,14 +313,17 @@ select {
     background-image: url(img/r9.png);
 }
 
+/*** GALAXY PAGE ***/
+#galaxy_form #t1 table td.l { vertical-align: middle; }
+
+/*** RESOURCES PAGE ***/
+#ressourcen { margin-top: 0.5em; }
+#ressourcen font[color="#FFFFFF"] { color: #ECEFF1; }
+
 /*** COMBAT REPORT ***/
 #overDiv + table {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-/*** RESOURCES ***/
-#ressourcen { margin-top: 0.5em; }
-#ressourcen font[color="#FFFFFF"] { color: #ECEFF1; }
 
 /*** COLORS ***/
 font[color="yellow"] { color: orange; }
@@ -346,20 +333,16 @@ font[color="#00ff00"], font[color="00FF00"], font[color="lime"], .noob { color: 
 .flight.ownattack { color: #0c0; }
 .return.ownattack { color: #0a0; }
 
-
-
-/**********************************************************************
- * Responsiveness (c) by Daniel Rudolf
- *********************************************************************/
+/*** RESPONSIVENESS ***/
 @media (max-device-width: 767px) {
-    body #header_top { /* msr */
+    #header_top {
         position: initial;
         padding-left: 0;
     }
     #header_top + #leftmenu + #content { padding-top: 0; }
     #leftmenu + #content { padding-left: 0; }
 
-    #leftmenu #menu { /* msr */
+    #menu {
         position: initial;
         width: 100%;
         height: auto;
@@ -367,7 +350,7 @@ font[color="#00ff00"], font[color="00FF00"], font[color="lime"], .noob { color: 
     }
 
     #menu { padding: 10px 0 !important; }
-    #menu table { margin: 0; }
+    #menu > table { margin: 0; }
 
     #menu table,
     #menu table tbody,
@@ -389,13 +372,12 @@ font[color="#00ff00"], font[color="00FF00"], font[color="lime"], .noob { color: 
     #menu > table tr:nth-last-child(2) div {
         margin-top: 1.5em;
     }
-    #menu table a {
+    #menu > table div font a {
         font-size: 14px;
-        padding: 10px !important;
+        padding: 10px;
     }
 }
 
 @media (max-device-width: 991px) {
-    #header_top > center { padding: 0 20px; }
     #header_top > center > table { width: 100%; }
 }

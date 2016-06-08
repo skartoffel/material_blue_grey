@@ -64,12 +64,12 @@ select {
 
 #overDiv td {
     background-color: #263238;
-    border: 0; 
+    border: 0;
 }
 
 #overDiv th {
     background-color: #263238;
-    border: 0; 
+    border: 0;
 }
 
 #overDiv table table table table {
@@ -144,13 +144,13 @@ select {
     text-decoration: none;
 }
 
-#menu > table > tr:first-child,
-#menu > table > tr:last-child {
+#menu > table tr:first-child,
+#menu > table tr:last-child {
     display: none;
 }
-#menu > table > tr:nth-child(12) div,
-#menu > table > tr:nth-child(16) div,
-#menu > table > tr:nth-last-child(3) div {
+#menu > table tr:nth-child(12) div,
+#menu > table tr:nth-child(16) div,
+#menu > table tr:nth-last-child(3) div {
     margin-top: 1.5em;
 }
 
@@ -215,8 +215,8 @@ select {
     color: #777;
 }
 
-#content img[src^="pic.php?url="], 
-#content img[src*="img/"], 
+#content img[src^="pic.php?url="],
+#content img[src*="img/"],
 #content img[src*="/pic/"],
 #content img[src*="debris.jpg"],
 #content a[onmouseover] > img[src*="s_mond.jpg"] {
@@ -351,7 +351,7 @@ font[color="#00ff00"], font[color="00FF00"], font[color="lime"], .noob { color: 
     #menu > table > tbody > tr > td {
         display: block;
     }
-    #menu > table > tr {
+    #menu > table tr {
         float: left;
         width: 50%;
     }
@@ -361,14 +361,14 @@ font[color="#00ff00"], font[color="00FF00"], font[color="lime"], .noob { color: 
         padding: 10px;
     }
 
-    #menu > table > tr:nth-child(12),
-    #menu > table > tr:nth-child(16),
-    #menu > table > tr:nth-last-child(3) {
+    #menu > table tr:nth-child(12),
+    #menu > table tr:nth-child(16),
+    #menu > table tr:nth-last-child(3) {
         clear: left;
     }
-    #menu > table > tr:nth-child(13) div,
-    #menu > table > tr:nth-child(17) div,
-    #menu > table > tr:nth-last-child(2) div {
+    #menu > table tr:nth-child(13) div,
+    #menu > table tr:nth-child(17) div,
+    #menu > table tr:nth-last-child(2) div {
         margin-top: 1.5em;
     }
 }

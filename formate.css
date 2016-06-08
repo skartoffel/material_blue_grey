@@ -168,17 +168,18 @@ select {
 #header_top + #leftmenu + #content { padding-top: 75px; }
 #leftmenu + #content { padding-left: 200px; }
 
-#content > center {
-    color: #222;
-}
-
-#content > center > br,
-#content > center > center > br {
+#content center > br,
+#content form > br {
     display: none;
 }
-#content > center > *:not(br),
-#content > center > center > *:not(br) {
+#content center > *,
+#content form > * {
     margin-top: 20px !important;
+    margin-bottom: 0;
+}
+
+#content > center {
+    color: #222;
 }
 
 #content table,

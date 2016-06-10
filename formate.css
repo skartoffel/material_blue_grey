@@ -62,23 +62,41 @@ select {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
-#overDiv td {
-    background-color: #263238;
-    border: 0;
-}
-
+#overDiv td,
 #overDiv th {
     background-color: #263238;
     border: 0;
+    font-weight: normal;
 }
 
-#overDiv table table table table {
-    width: 100%;
+#overDiv a {
+    color: #607D8B;
+    display: block;
+    font-weight: bold;
+}
+
+#overDiv a:not(:last-child) {
+    border-bottom: 1px solid #36474f;
+}
+
+#overDiv table {
+    width: 120px;
+    text-align: center;
 }
 
 #overDiv table table table table tr {
     border-top: 1px solid #36474f;
 }
+
+#overDiv > table table table th[width="80"] {
+    display: none;
+}
+
+#overDiv table table table:nth-child(1) > tbody > tr:nth-child(1) > td {
+    text-align: center;
+}
+
+#o
 
 /*** HEADER ***/
 #header_top {

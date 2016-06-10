@@ -92,11 +92,13 @@ select {
     display: none;
 }
 
-#overDiv table table table:nth-child(1) > tbody > tr:nth-child(1) > td {
+#overDiv table table table:first-child > tbody > tr:first-child > td {
     text-align: center;
 }
 
-#o
+#overDiv table table table tr:not(:last-child) {
+    border-bottom: 1px solid #36474f;
+}
 
 /*** HEADER ***/
 #header_top {

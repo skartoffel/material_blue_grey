@@ -156,6 +156,8 @@ select {
     padding: 10px 20px 10px 210px;
     z-index: 20;
     background: #263238;
+}
+#header_top {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 

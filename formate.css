@@ -109,22 +109,25 @@ select {
 }
 
 #overDiv table[width="240"] table tr:not(:last-child),
-#overDiv table[width="240"] + table tr:not(:last-child), 
-#overDiv table[width="240"] + table tr:last-child a:not(:last-of-type) {
+#overDiv table[width="240"] + table tr:not(:last-child),
+#overDiv table[width="240"] + table tr:last-child a:not(:last-of-type),
+#overDiv table[width="240"] th[width="80"] + th > a:not(:last-of-type) {
     border-bottom: 1px solid #36474f;
 }
 #overDiv table[width="240"] table tr td,
 #overDiv table[width="240"] table tr th,
 #overDiv table[width="240"] + table tr:not(:last-child) td,
 #overDiv table[width="240"] + table tr:not(:last-child) th,
-#overDiv table[width="240"] + table tr:last-child a {
+#overDiv table[width="240"] + table tr:last-child a,
+#overDiv table[width="240"] th[width="80"] + th > a {
     padding: 5px;
     background: #263238;
 }
 
 #overDiv table[width="240"] table tr:last-child td,
 #overDiv table[width="240"] table tr:last-child th,
-#overDiv table[width="240"] + table tr:last-child th a:last-of-type {
+#overDiv table[width="240"] + table tr:last-child th a:last-of-type,
+#overDiv table[width="240"] th[width="80"] + th > a:last-of-type {
     padding-bottom: 10px;
 }
 

@@ -341,6 +341,7 @@ select {
 
 /*** GALAXY PAGE ***/
 #galaxy_form #t1 table td.l { vertical-align: middle; }
+#galaxy_form + table > tbody > tr:nth-last-child(2) td:last-child { visibility: hidden; }
 
 /*** ALLIANCE PAGE ***/
 #content > center > img {

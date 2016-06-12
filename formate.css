@@ -286,6 +286,12 @@ select {
     color: #777;
 }
 
+#content a > img {
+    border: 0;
+    max-width: 50px;
+    max-height: 50px;
+}
+
 #content img[src^="pic.php?url="],
 #content img[src*="img/"],
 #content img[src*="/pic/"],

@@ -290,7 +290,7 @@ select {
 #content img[src*="img/"],
 #content img[src*="/pic/"],
 #content img[src*="debris.jpg"],
-#content a[onmouseover] > img[src*="s_mond.jpg"] {
+#content img[src*="/planeten/small/s_"] {
     display: initial;
 }
 

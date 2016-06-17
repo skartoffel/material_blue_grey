@@ -364,6 +364,21 @@ select {
 #ressourcen { margin-top: 0.5em; }
 #ressourcen font[color="#FFFFFF"] { color: #ECEFF1; }
 
+/*** SHIPYARD + DEFENSE PAGES ***/
+#content > center > font[color="#FF0000"] {
+    display: block;
+}
+#content form[action*="page=buildings"][action*="mode=Flotte"] > table:first-child,
+#content form[action*="page=buildings"][action*="mode=Flotte"] > form[Name="Atr"],
+#content form[action*="page=buildings"][action*="mode=Verteidigung"] > table:first-child,
+#content form[action*="page=buildings"][action*="mode=Verteidigung"] > form[Name="Atr"] {
+    margin-bottom: 20px;
+}
+#content form[action*="page=buildings"][action*="mode=Flotte"] > #bx,
+#content form[action*="page=buildings"][action*="mode=Verteidigung"] > #bx{
+    margin-top: 0 !important;
+}
+
 /*** GALAXY PAGE ***/
 #galaxy_form #t1 table td.l { vertical-align: middle; }
 

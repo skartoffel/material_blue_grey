@@ -101,7 +101,7 @@ select {
 
 #overDiv table[width="240"],
 #overDiv table[width="240"] + table,
-#overDiv font > table:not([width="240"]) {
+#overDiv font > table:not([width]) {
     width: 175px;
 }
 
@@ -112,11 +112,11 @@ select {
 }
 
 #overDiv table[width="240"] > tbody > tr:first-child,
-#overDiv font > table:not([width="240"]) tr:first-child {
+#overDiv font > table:not([width]) tr:first-child {
     border-bottom: 1px solid #36474f;
 }
 #overDiv table[width="240"] > tbody > tr:first-child > td.c,
-#overDiv font > table:not([width="240"]) tr:first-child td.c {
+#overDiv font > table:not([width]) tr:first-child td.c {
     padding: 5px;
     padding-top: 10px;
     background: #607D8B;
@@ -126,7 +126,7 @@ select {
     content: 'Debris field';
 }
 #overDiv table[width="240"] + table tr:first-child td::after,
-#overDiv font > table:not([width="240"]) tr:first-child td::after {
+#overDiv font > table:not([width]) tr:first-child td::after {
     content: ':';
 }
 
@@ -134,7 +134,7 @@ select {
 #overDiv table[width="240"] + table tr:not(:last-child),
 #overDiv table[width="240"] + table tr:last-child a:not(:last-of-type),
 #overDiv table[width="240"] th[width="80"] + th > a:not(:last-of-type),
-#overDiv font > table:not([width="240"]) tr:not(:last-child) {
+#overDiv font > table:not([width]) tr:not(:last-child) {
     border-bottom: 1px solid #36474f;
 }
 #overDiv table[width="240"] table tr td,
@@ -143,7 +143,7 @@ select {
 #overDiv table[width="240"] + table tr:not(:last-child) th,
 #overDiv table[width="240"] + table tr:last-child a,
 #overDiv table[width="240"] th[width="80"] + th > a,
-#overDiv font > table:not([width="240"]) td {
+#overDiv font > table:not([width]) td {
     padding: 5px;
 }
 
@@ -151,7 +151,7 @@ select {
 #overDiv table[width="240"] table tr:last-child th,
 #overDiv table[width="240"] + table tr:last-child th a:last-of-type,
 #overDiv table[width="240"] th[width="80"] + th > a:last-of-type,
-#overDiv font > table:not([width="240"]) tr:last-child td {
+#overDiv font > table:not([width]) tr:last-child td {
     padding-bottom: 10px;
 }
 

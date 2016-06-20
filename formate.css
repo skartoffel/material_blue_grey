@@ -59,13 +59,18 @@ select {
 
 /*** TOOLTIPS ***/
 #overDiv {
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    padding: 5px 20px 20px 20px;
+    z-index: 1000;
 }
 
 #overDiv table {
-    width: 175px;
+    width: 100%;
     text-align: center;
     background: transparent !important;
+}
+#overDiv > table {
+    background: #263238 !important;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 #overDiv td,
@@ -86,16 +91,32 @@ select {
     display: none;
 }
 
+#overDiv font > font {
+    display: block;
+    padding: 5px;
+    text-align: left;
+}
+#overDiv font > font b { font-weight: normal; }
+#overDiv font > font br { display: inline; }
+
+#overDiv table[width="240"],
+#overDiv table[width="240"] + table,
+#overDiv font > table:not([width="240"]) {
+    width: 175px;
+}
+
 #overDiv table[width="240"] th[width="80"],
 #overDiv table[width="240"] table > tbody > tr:nth-child(4),
 #overDiv table[width="240"] + table > tbody > tr:nth-child(4) {
     display: none;
 }
 
-#overDiv table[width="240"] > tbody > tr:first-child {
+#overDiv table[width="240"] > tbody > tr:first-child,
+#overDiv font > table:not([width="240"]) tr:first-child {
     border-bottom: 1px solid #36474f;
 }
-#overDiv table[width="240"] > tbody > tr:first-child > td.c {
+#overDiv table[width="240"] > tbody > tr:first-child > td.c,
+#overDiv font > table:not([width="240"]) tr:first-child td.c {
     padding: 5px;
     padding-top: 10px;
     background: #607D8B;
@@ -104,14 +125,16 @@ select {
 #overDiv table[width="240"] > tbody > tr:first-child > td.c:empty::after {
     content: 'Debris field';
 }
-#overDiv table[width="240"] + table tr:first-child td::after {
+#overDiv table[width="240"] + table tr:first-child td::after,
+#overDiv font > table:not([width="240"]) tr:first-child td::after {
     content: ':';
 }
 
 #overDiv table[width="240"] table tr:not(:last-child),
 #overDiv table[width="240"] + table tr:not(:last-child),
 #overDiv table[width="240"] + table tr:last-child a:not(:last-of-type),
-#overDiv table[width="240"] th[width="80"] + th > a:not(:last-of-type) {
+#overDiv table[width="240"] th[width="80"] + th > a:not(:last-of-type),
+#overDiv font > table:not([width="240"]) tr:not(:last-child) {
     border-bottom: 1px solid #36474f;
 }
 #overDiv table[width="240"] table tr td,
@@ -119,15 +142,16 @@ select {
 #overDiv table[width="240"] + table tr:not(:last-child) td,
 #overDiv table[width="240"] + table tr:not(:last-child) th,
 #overDiv table[width="240"] + table tr:last-child a,
-#overDiv table[width="240"] th[width="80"] + th > a {
+#overDiv table[width="240"] th[width="80"] + th > a,
+#overDiv font > table:not([width="240"]) td {
     padding: 5px;
-    background: #263238;
 }
 
 #overDiv table[width="240"] table tr:last-child td,
 #overDiv table[width="240"] table tr:last-child th,
 #overDiv table[width="240"] + table tr:last-child th a:last-of-type,
-#overDiv table[width="240"] th[width="80"] + th > a:last-of-type {
+#overDiv table[width="240"] th[width="80"] + th > a:last-of-type,
+#overDiv font > table:not([width="240"]) tr:last-child td {
     padding-bottom: 10px;
 }
 
@@ -341,7 +365,6 @@ select {
 
 /*** GALAXY PAGE ***/
 #galaxy_form #t1 table td.l { vertical-align: middle; }
-#galaxy_form + table > tbody > tr:nth-last-child(2) td:last-child { visibility: hidden; }
 
 /*** ALLIANCE PAGE ***/
 #content > center > img {
@@ -352,6 +375,9 @@ select {
 }
 
 #content > center > a { display: block; }
+
+/*** ALLIANCE PAGE ***/
+#content form[action*="page=stat"] + table th:first-child a[href="#"] { text-decoration: none; }
 
 /*** MESSAGES PAGE ***/
 input[type="checkbox"] + input[value="REPORT MESSAGE"] {

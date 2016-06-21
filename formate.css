@@ -248,6 +248,14 @@ select {
     margin-bottom: 0;
 }
 
+#content table table:first-child + table {
+    width: 100%;
+    text-align: center;
+}
+#content table table:first-child:not(:empty) + table {
+    margin-top: 10px;
+}
+
 #content > center {
     color: #222;
 }
@@ -300,18 +308,6 @@ select {
     display: initial;
 }
 
-#content img[src*="appwiz.gif"] {
-    display: none;
-}
-
-#content a[href$="&a=9"]::after {
-    content: "change tag |";
-}
-
-#content a[href$="&a=10"]::after {
-    content: "change name";
-}
-
 #content th > img[src*="img/r"] {
     background-size: 16px;
     box-sizing: border-box;
@@ -324,50 +320,26 @@ select {
     width: 14px;
 }
 
-#content img[src*="img/r1"] {
-    background-image: url(img/r1.png);
-}
-
-#content img[src*="img/r2"] {
-    background-image: url(img/r2.png);
-}
-
-#content img[src*="img/r3"] {
-    background-image: url(img/r3.png);
-}
-
-#content img[src*="img/r4"] {
-    background-image: url(img/r4.png);
-}
-
-#content img[src*="img/r5"] {
-    background-image: url(img/r5.png);
-}
-
-#content img[src*="img/r6"] {
-    background-image: url(img/r6.png);
-}
-
-#content img[src*="img/r7"] {
-    background-image: url(img/r7.png);
-}
-
-#content img[src*="img/r8"] {
-    background-image: url(img/r8.png);
-}
-
-#content img[src*="img/r9"] {
-    background-image: url(img/r9.png);
-}
-
 /*** RESOURCES PAGE ***/
 #ressourcen { margin-top: 0.5em; }
 #ressourcen font[color="#FFFFFF"] { color: #ECEFF1; }
+
+/*** FLEET PAGE ***/
+form[action*="page=flotten2"] > table > tbody > tr:last-child { display: none; }
+
+/*** TECHNOLOGY DETAIL PAGE ***/
+#content > center > table > tbody > tr:nth-of-type(3) > th > p { display: none; }
+#content > center > table > tbody > tr:nth-of-type(3) > th > p + center > table {
+    width: 100%;
+    margin-top: 0 !important;
+    text-align: center;
+}
 
 /*** SHIPYARD + DEFENSE PAGES ***/
 #content > center > font[color="#FF0000"] {
     display: block;
 }
+
 #content form[action*="page=buildings"][action*="mode=Flotte"] > table:first-child,
 #content form[action*="page=buildings"][action*="mode=Flotte"] > form[Name="Atr"],
 #content form[action*="page=buildings"][action*="mode=Verteidigung"] > table:first-child,
@@ -386,11 +358,24 @@ select {
 #content > center > img {
     background: #ECEFF1;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    margin-bottom: 20px;
     padding: 9px;
 }
 
 #content > center > a { display: block; }
+
+#content img[src*="appwiz.gif"] { display: none; }
+#content a[href*="page=allianzen"][href$="&a=9"]::after { content: "change tag |"; }
+#content a[href*="page=allianzen"][href$="&a=10"]::after { content: "change name"; }
+
+#content img[src*="img/r1"] { background-image: url(img/r1.png); }
+#content img[src*="img/r2"] { background-image: url(img/r2.png); }
+#content img[src*="img/r3"] { background-image: url(img/r3.png); }
+#content img[src*="img/r4"] { background-image: url(img/r4.png); }
+#content img[src*="img/r5"] { background-image: url(img/r5.png); }
+#content img[src*="img/r6"] { background-image: url(img/r6.png); }
+#content img[src*="img/r7"] { background-image: url(img/r7.png); }
+#content img[src*="img/r8"] { background-image: url(img/r8.png); }
+#content img[src*="img/r9"] { background-image: url(img/r9.png); }
 
 /*** MESSAGES PAGE ***/
 input[type="checkbox"] + input[value="REPORT MESSAGE"] {
@@ -414,6 +399,7 @@ input[type="checkbox"] + input[value="REPORT MESSAGE"]:hover {
 }
 
 /*** COLORS ***/
+font[color="FFFFFF"] { color: #999; }
 font[color="yellow"] { color: orange; }
 font[color="#ff0000"], font[color="FF0000"] { color: #e00; }
 font[color="#00ff00"], font[color="00FF00"], font[color="lime"], .noob { color: #0c0; }

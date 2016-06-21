@@ -95,6 +95,7 @@ select {
     display: block;
     padding: 5px;
     text-align: left;
+    font-size: 1.1rem;
 }
 #overDiv font > font b { font-weight: normal; }
 #overDiv font > font br { display: inline; }
@@ -439,7 +440,7 @@ font[color="#00ff00"], font[color="00FF00"], font[color="lime"], .noob { color: 
     }
 
     #menu > table div font a {
-        font-size: 14px;
+        font-size: 1.1rem;
         padding: 10px;
     }
 

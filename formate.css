@@ -376,7 +376,7 @@ select {
 
 #content > center > a { display: block; }
 
-/*** ALLIANCE PAGE ***/
+/*** STATISTICS PAGE ***/
 #content form[action*="page=stat"] + table th:first-child a[href="#"] { text-decoration: none; }
 
 /*** MESSAGES PAGE ***/

@@ -363,7 +363,7 @@ select {
 .ownfederation, .federation { color: #D43635; }
 .ownhold, .hold { color: #D57936; }
 .ownmissle, .missle { color: #D43635; }
-.return { opacity: 0.80; }
+.return { opacity: 0.70; }
 
 /*** RESOURCES PAGE ***/
 #ressourcen { margin-top: 0.5em; }

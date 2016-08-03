@@ -34,6 +34,8 @@ textarea, input {
     border: 1px solid #ddd;
     color: #222 !important;
 }
+input { padding: 0.2em 0.5em; }
+textarea { padding: 0.5em 0.6em; }
 
 input[type="submit"], input[type="reset"], input[type="button"] {
     background-color: #CFD8DC;

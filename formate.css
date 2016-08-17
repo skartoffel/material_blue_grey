@@ -353,6 +353,19 @@ select {
     width: 14px;
 }
 
+/*** EVENTS ***/
+.owncolony { color: #2BBFBF; }
+.owntransport, .transport { color: #7EAD3D; }
+.owndeploy, .deploy { color: #36B588; }
+.ownespionage, .espionage, .espionagereport { color: #BD9B2F; }
+.ownattack, .attack, .combatreport { color: #D43635; }
+.owndestroy, .destroy { color: #FF3356; }
+.ownharvest { color: #11A140; }
+.ownfederation, .federation { color: #D43635; }
+.ownhold, .hold { color: #D57936; }
+.ownmissle, .missle { color: #D43635; }
+.return { opacity: 0.70; }
+
 /*** RESOURCES PAGE ***/
 #ressourcen { margin-top: 0.5em; }
 #ressourcen font[color="#FFFFFF"] { color: #ECEFF1; }

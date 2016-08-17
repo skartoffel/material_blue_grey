@@ -34,6 +34,8 @@ textarea, input {
     border: 1px solid #ddd;
     color: #222 !important;
 }
+input { padding: 0.2em 0.5em; }
+textarea { padding: 0.5em 0.6em; }
 
 input[type="submit"], input[type="reset"], input[type="button"] {
     background-color: #CFD8DC;
@@ -145,8 +147,7 @@ select {
 #overDiv table[width="240"] > tbody > tr:first-child > td.c:empty::after {
     content: 'Debris field';
 }
-#overDiv table[width="240"] + table tr:first-child td::after,
-#overDiv font > table:not([width]) tr:first-child td::after {
+#overDiv table[width="240"] + table tr:first-child td::after {
     content: ':';
 }
 
